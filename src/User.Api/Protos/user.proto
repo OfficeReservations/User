@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package user;
+
+import "Protos/models.proto";
+
+option csharp_namespace = "User";
+
+service UserService {
+  rpc AddTeacher (AddTeacherRequest) returns (AddTeacherResponse);
+}
+
+message AddTeacherRequest {
+  Teacher teacher = 1;
+}
+
+
+message AddTeacherResponse {
+  string id = 1;
+}
